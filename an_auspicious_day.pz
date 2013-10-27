@@ -49,28 +49,10 @@ Leaves ( maybe simplify tree model )
 pink lightred red
 
 .0000
-11101
+12101
 00020
 0.00.
-.....
-
-ThickLeaves
-pink lightred red
-
-.0000
-12101
-10112
-0.00.
-01110
-
-LeftEdgeLeaves
-pink lightred red
-
-.0000
-12101
-1.112
-.100.
-..110
+.01..
 
 Trunk
 #ee6246 #c05540 pink
@@ -272,6 +254,21 @@ lightgrey grey darkgrey lightgreen green
 11101
 44132
 
+Water
+lightblue blue darkblue lightgreen
+11111
+11111
+11111
+11111
+11331
+
+Cloud
+white grey lightgrey
+00000
+00000
+00000
+00000
+00000
 
 =======
 LEGEND
@@ -301,6 +298,8 @@ Crystal = Orange or Blue or Red or Green
 D = Dirt
 _ = Dirt and Grass
 L = Ladder
+~ = Water and Sky
+? = Cloud and Sky
 
 | = Sky and TallGrass
 ! = Sky and Flowers
@@ -318,25 +317,25 @@ i = Rock and Dirt
 
 T = Sky and Trunk
 / = Sky and Leaves
-# = Sky and ThickLeaves
-\ = Sky and LeftEdgeLeaves
+# = Sky and Leaves
+\ = Sky and Leaves
 
 y = Dirt and Trunk
-< = Dirt and LeftEdgeLeaves
-% = Dirt and ThickLeaves
+< = Dirt and Leaves
+% = Dirt and Leaves
 > = Dirt and Leaves
 
-` = LeftEdgeLeaves and Trunk and Dirt
-" = ThickLeaves and Trunk and Dirt
+` = Leaves and Trunk and Dirt
+" = Leaves and Trunk and Dirt
 ' = Leaves and Trunk and Dirt
 
-{ = LeftEdgeLeaves and Trunk and Sky
-- = ThickLeaves and Trunk and Sky
+{ = Leaves and Trunk and Sky
+- = Leaves and Trunk and Sky
 } = Leaves and Trunk and Sky
 
 u = Leaves and Ladder
-c = LeftEdgeLeaves and Sun
-n = ThickLeaves and Sun
+c = Leaves and Sun
+n = Leaves and Sun
 m = Leaves and Sun
 
 S = Sky and Stump
@@ -392,10 +391,10 @@ PermitsBlue = Stump and Leaves and TallGrass
 Ⅲ = PermitsRed
 Ⅳ = PermitsOrange
 
-RedCollision = Leaves or ThickLeaves or LeftEdgeLeaves
-GreenCollision = TallGrass or Flowers or Stump
+RedCollision = Leaves
+GreenCollision = TallGrass or Flowers or Stump or Water
 OrangeCollision = Trunk or Root or Sun
-BlueCollision = ClosedOracle or Rock
+BlueCollision = ClosedOracle or Rock or Cloud
 DownCrystals = OrangeCrystalDOWN or BlueCrystalDOWN or RedCrystalDown or GreenCrystalDown
 
 =======
@@ -409,17 +408,17 @@ COLLISIONLAYERS
 (background)
 Sky, Dirt, openOracle, Ladder, FolkLeft, FolkCenter, FolkRight (9)
 (background details) ( TODO move graves to the background and rename them )
-OrangePlayer, Trunk, Root, Sun, Stump (3) 
+OrangePlayer, Trunk, Root, Sun, Stump (3)
 (passable objects)
-RedPlayer, Leaves, ThickLeaves, LeftEdgeLeaves, OracleCap, DownCrystals (10)
+RedPlayer, Leaves, OracleCap, DownCrystals (7)
 (action layer)
-BluePlayer, ClosedOracle, Rock (3)
+GreenPlayer, TallGrass, Flowers, Water (4)
 (foreground)
-GreenPlayer, TallGrass, Flowers (4)
+BluePlayer, ClosedOracle, Rock, Cloud (3)
 ( Crystals )
 Orange, Blue, Red, Green, Grass (5)
 
-( this looks like 34 objects to me )
+( this looks like 31 objects to me )
 
 ======
 RULES
@@ -547,4 +546,3 @@ LEVELS
 
 (message The oracles' gems have faded...
 message     today is an auspicious day)
-
