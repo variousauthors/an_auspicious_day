@@ -1,0 +1,8 @@
+ - For the release, make a big "world map" stitched together from screenshots
+ - redo the map using unicode character for clarity
+ - bug: you can't summon a crystal on the last tile of the screen (because of the dual crystal thing)
+ - bug: gravity doesn't work for crossing a collision object
+ - bug: the checkpoint rule requires "no sky", verify that all checkpoints work
+
+
+

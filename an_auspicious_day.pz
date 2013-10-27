@@ -1,0 +1,550 @@
+title An Auspicious Day v0.0.4
+author arrogant.gamer
+homepage www.arrogantgamer.com
+flickscreen 20x10
+
+color_palette proteus_rich
+
+========
+OBJECTS
+========
+
+Sky
+White lightblue lightblue
+
+22222
+22222
+22222
+22222
+22222
+
+Grass
+LightGreen Green
+
+11101
+10000
+.01..
+.....
+.....
+
+Dirt
+lightbrown brown darkbrown
+
+10000
+11111
+01211
+10211
+21212
+
+Ladder
+lightbrown brown darkbrown grey darkgrey
+
+40004
+43334
+41214
+43334
+41214
+
+Leaves ( maybe simplify tree model )
+pink lightred red
+
+.0000
+11101
+00020
+0.00.
+.....
+
+ThickLeaves
+pink lightred red
+
+.0000
+12101
+10112
+0.00.
+01110
+
+LeftEdgeLeaves
+pink lightred red
+
+.0000
+12101
+1.112
+.100.
+..110
+
+Trunk
+#ee6246 #c05540 pink
+.1110
+.112.
+.101.
+.111.
+11101
+
+Root ( maybe remove root )
+#ee6246 #c05540 pink
+.....
+.....
+.....
+.2011
+11..0
+
+Stump ( maybe replace stump with rock )
+#ee6246 #c05540 #834538 pink
+.11..
+013..
+1101.
+1111.
+12102
+
+TallGrass
+lightgreen yellow
+.....
+.....
+.....
+.1.1.
+01001
+
+Flowers
+lightgreen purple blue
+.....
+.....
+1..2.
+0.20.
+0..0.
+
+FolkLeft
+lightgrey grey darkgrey blue lightblue
+44111
+22231
+23232
+23212
+22212
+
+FolkCenter
+lightgrey grey darkgrey blue lightblue
+44442
+44442
+22412
+32412
+22012
+
+FolkRight
+lightgrey grey darkgrey blue lightblue
+24444
+24444
+24222
+21232
+21222
+
+BluePlayer
+lightgrey grey darkgrey blue
+.....
+.000.
+.030.
+.030.
+.000.
+
+RedPlayer
+lightgrey grey darkgrey red
+.....
+.000.
+.030.
+.030.
+.000.
+
+GreenPlayer
+lightgrey grey darkgrey green
+.....
+.000.
+.030.
+.030.
+.000.
+
+OrangePlayer
+lightgrey grey darkgrey orange
+.....
+.000.
+.030.
+.030.
+.000.
+
+ClosedOracle
+lightgrey grey darkgrey black
+.222.
+.232.
+.232.
+.222.
+.222.
+
+OpenOracle
+lightblue darkgrey
+00000
+00000
+01010
+01110
+01110
+
+OracleCap
+lightgrey grey darkgrey orange
+.....
+.....
+.222.
+.2.2.
+.....
+
+Orange
+orange
+..0..
+..0..
+.....
+.....
+.....
+
+Blue
+blue
+..0..
+..0..
+.....
+.....
+.....
+
+Red
+red
+..0..
+..0..
+.....
+.....
+.....
+
+Green
+green
+..0..
+..0..
+.....
+.....
+.....
+
+OrangeCrystalDOWN
+orange
+.....
+..0..
+..0..
+.....
+.....
+
+BlueCrystalDOWN
+blue
+.....
+..0..
+..0..
+.....
+.....
+
+RedCrystalDOWN
+red
+.....
+..0..
+..0..
+.....
+.....
+
+GreenCrystalDOWN
+green
+.....
+..0..
+..0..
+.....
+.....
+
+Sun
+yellow
+00000
+00000
+00000
+00000
+00000
+
+Rock
+lightgrey grey darkgrey lightgreen green
+.....
+.11..
+.101.
+11101
+44132
+
+
+=======
+LEGEND
+=======
+
+Background = Sky
+DirtyCap = OracleCap and Dirt
+
+( Oracles )
+ClosedOrangeOracle = Sky and OrangeCrystalDown and ClosedOracle
+OpenOrangeOracle = Orange and OpenOracle
+
+ClosedGreenOracle = Sky and GreenCrystalDown and ClosedOracle
+OpenGreenOracle = Green and OpenOracle
+
+ClosedBlueOracle = Sky and BlueCrystalDown and ClosedOracle
+OpenBlueOracle = Blue and OpenOracle
+
+ClosedRedOracle = Sky and RedCrystalDown and ClosedOracle
+OpenRedOracle = Red and OpenOracle
+
+Crystal = Orange or Blue or Red or Green
+
+Ↄ = OpenOracle
+ɷ = OracleCap
+
+D = Dirt
+_ = Dirt and Grass
+L = Ladder
+
+| = Sky and TallGrass
+! = Sky and Flowers
+: = Dirt and TallGrass
+; = Dirt and Flowers
+
+] = Sky and Root and TallGrass
+@ = Sky and Root
+& = Dirt and Root
+
+^ = Rock
+i = Rock and Dirt
+
+[ = Sky and Trunk and Flowers
+
+T = Sky and Trunk
+/ = Sky and Leaves
+# = Sky and ThickLeaves
+\ = Sky and LeftEdgeLeaves
+
+y = Dirt and Trunk
+< = Dirt and LeftEdgeLeaves
+% = Dirt and ThickLeaves
+> = Dirt and Leaves
+
+` = LeftEdgeLeaves and Trunk and Dirt
+" = ThickLeaves and Trunk and Dirt
+' = Leaves and Trunk and Dirt
+
+{ = LeftEdgeLeaves and Trunk and Sky
+- = ThickLeaves and Trunk and Sky
+} = Leaves and Trunk and Sky
+
+u = Leaves and Ladder
+c = LeftEdgeLeaves and Sun
+n = ThickLeaves and Sun
+m = Leaves and Sun
+
+S = Sky and Stump
+$ = Dirt and Stump
+* = Sun
+
+q = FolkLeft
+e = FolkRight
+1 = FolkCenter and Root
+w = 1 and BluePlayer
+2 = FolkCenter
+3 = FolkCenter
+4 = FolkCenter
+
+Folk = FolkCenter or FolkLeft or FolkRight
+
+. = Background
+
+Player = BluePlayer or OrangePlayer or RedPlayer or GreenPlayer
++ = BluePlayer
+
+BlueToOrange = BluePlayer and Orange and openOracle
+BlueToRed = BluePlayer and Red and openOracle
+BlueToGreen = BluePlayer and Green and openOracle
+
+OrangeToBlue = OrangePlayer and Blue and openOracle
+OrangeToRed = OrangePlayer and Red and openOracle
+OrangeToGreen = OrangePlayer and Green and openOracle
+
+RedToOrange = RedPlayer and Orange and openOracle
+RedToBlue = RedPlayer and Blue and openOracle
+RedToGreen = RedPlayer and Green and openOracle
+
+GreenToOrange = GreenPlayer and Orange and openOracle
+GreenToRed = GreenPlayer and Red and openOracle
+GreenToBlue = GreenPlayer and Blue and openOracle
+
+P = BluePlayer and FolkCenter
++ = BluePlayer
+& = BluePlayer and Dirt
+O = ClosedOrangeOracle
+B = ClosedBlueOracle
+R = ClosedRedOracle
+G = ClosedGreenOracle
+
+PermitsOrange = Rock and Leaves and TallGrass
+PermitsRed = Rock and Stump and TallGrass
+PermitsGreen = Rock and Stump and Leaves
+PermitsBlue = Stump and Leaves and TallGrass
+
+Ⅰ = PermitsBlue
+Ⅱ = PermitsGreen
+Ⅲ = PermitsRed
+Ⅳ = PermitsOrange
+
+RedCollision = Leaves or ThickLeaves or LeftEdgeLeaves
+GreenCollision = TallGrass or Flowers or Stump
+OrangeCollision = Trunk or Root or Sun
+BlueCollision = ClosedOracle or Rock
+DownCrystals = OrangeCrystalDOWN or BlueCrystalDOWN or RedCrystalDown or GreenCrystalDown
+
+=======
+SOUNDS
+=======
+
+================
+COLLISIONLAYERS
+================
+
+(background)
+Sky, Dirt, openOracle, Ladder, FolkLeft, FolkCenter, FolkRight (9)
+(background details) ( TODO move graves to the background and rename them )
+OrangePlayer, Trunk, Root, Sun, Stump (3) 
+(passable objects)
+RedPlayer, Leaves, ThickLeaves, LeftEdgeLeaves, OracleCap, DownCrystals (10)
+(action layer)
+BluePlayer, ClosedOracle, Rock (3)
+(foreground)
+GreenPlayer, TallGrass, Flowers (4)
+( Crystals )
+Orange, Blue, Red, Green, Grass (5)
+
+( this looks like 34 objects to me )
+
+======
+RULES
+======
+
+( player can "summon" the crystal into their square )
+( but we guard against accidentally destroying crystals this way )
+[ no Crystal | Up Player | Crystal ] -> [ | UP Player Crystal | ]
+[ no Crystal | down Player | Crystal ] -> [ | DOWN Player Crystal | ]
+
+( player can't jump, only climb )
+[ UP Player no Ladder ] -> [ Player ]
+[ DOWN Player no Ladder ] -> [ Player ]
+
+( since the player may not always be on the same layer, but 
+  grass must always be a barrier )
+[ > player | grass ] -> [ player | grass ]
+
+( I haven't been able to get the player to enter a ladder from above,
+  only horizontally, so this next rule prevents players from climbing
+  up into the sky )
+[ UP Player Ladder | Sky ] -> [ Player Ladder | Sky ]
+
+( we need gravity for the player: they should fall through anything they
+  do not collide with; but everyone collides with grass )
+DOWN [ BluePlayer no Ladder | no Grass no BlueCollision ] -> [ down BluePlayer no Ladder | ] again
+DOWN [ RedPlayer no Ladder | no Grass no RedCollision ] -> [ down RedPlayer no Ladder | ] again
+DOWN [ GreenPlayer no Ladder | no Grass no GreenCollision ] -> [ down GreenPlayer no Ladder | ] again
+DOWN [ OrangePlayer no Ladder | no Grass no OrangeCollision ] -> [ down OrangePlayer no Ladder | ] again
+
+( a climbing player can only move up or down )
+vertical [ Ladder | left Player | Ladder ] -> [ Ladder | Player | Ladder ]
+vertical [ Ladder | right Player | Ladder ] -> [ Ladder | Player | Ladder ]
+
+( OPENING / CLOSING ORACLES )
+[ Action Player | ClosedOrangeOracle ] -> [ Player | OpenOrangeOracle ]
+late vertical [ OpenOrangeOracle | ] -> [ OpenOrangeOracle | OracleCap ]
+
+[ Action Player | OpenOrangeOracle ] -> [ Player | ClosedOrangeOracle ]
+late vertical [ ClosedOrangeOracle | OracleCap ] -> [ ClosedOrangeOracle | Sky ]
+
+[ Action Player | ClosedBlueOracle ] -> [ Player | OpenBlueOracle ]
+late vertical [ OpenBlueOracle | ] -> [ OpenBlueOracle | OracleCap ]
+
+[ Action Player | OpenBlueOracle ] -> [ Player | ClosedBlueOracle ]
+late vertical [ ClosedBlueOracle | OracleCap ] -> [ ClosedBlueOracle | Sky ]
+
+[ Action Player | ClosedRedOracle ] -> [ Player | OpenRedOracle ]
+late vertical [ OpenRedOracle | ] -> [ OpenRedOracle | OracleCap ]
+
+[ Action Player | OpenRedOracle ] -> [ Player | ClosedRedOracle ]
+late vertical [ ClosedRedOracle | OracleCap ] -> [ ClosedRedOracle | Sky ]
+
+[ Action Player | ClosedGreenOracle ] -> [ Player | OpenGreenOracle ]
+late vertical [ OpenGreenOracle | ] -> [ OpenGreenOracle | OracleCap ]
+
+[ Action Player | OpenGreenOracle ] -> [ Player | ClosedGreenOracle ]
+late vertical [ ClosedGreenOracle | OracleCap ] -> [ ClosedGreenOracle | Sky ]
+
+late [ DirtyCap ] -> [ _ ] ( clean up the damn dirty cap )
+
+( crystals should follow player and other crystals )
+[ Crystal | >  Player ] -> [ > Crystal | >  Player ]
+[ perpendicular Player | Crystal ] -> [ perpendicular Player | < Crystal ]
+
+([ Crystal | > Player ] -> [ > Crystal | > Player ]
+[ Crystal | > Player | Ladder ] -> [ | | Player Ladder Crystal ])
+
+( crystals should act on one another )
+( Caylay table )
+(              )
+(   B G R O    )
+( B B G R O    )
+( G G B O R    )
+( R R O B G    )
+( O O R G B    )
+
+late horizontal [ Crystal | Blue   ] -> [ Crystal | ]
+late horizontal [ Orange  | Orange ] -> [ Blue    | ]
+late horizontal [ Red     | Red    ] -> [ Blue    | ]
+late horizontal [ Green   | Green  ] -> [ Blue    | ]
+late horizontal [ Red     | Orange ] -> [ Green   | ]
+late horizontal [ Red     | Green  ] -> [ Orange  | ]
+late horizontal [ Orange  | Green  ] -> [ Red     | ]
+
+( swapping crystals )
+[ action BluePlayer Orange no OrangeCollision ] -> [ OrangePlayer Blue ]
+[ action BluePlayer Red no RedCollision ] -> [ RedPlayer Blue ]
+[ action BluePlayer Green no GreenCollision ] -> [ GreenPlayer Blue ]
+
+[ action OrangePlayer Green no GreenCollision ] -> [ GreenPlayer Orange ]
+[ action OrangePlayer Red no RedCollision ] -> [ RedPlayer Orange ]
+[ action OrangePlayer Blue no BlueCollision ] -> [ BluePlayer Orange ]
+
+[ action RedPlayer Green no GreenCollision ] -> [ GreenPlayer Red ]
+[ action RedPlayer Orange no OrangeCollision ] -> [ OrangePlayer Red ]
+[ action RedPlayer Blue no BlueCollision ] -> [ BluePlayer Red ]
+
+[ action GreenPlayer Orange no OrangeCollision ] -> [ OrangePlayer Green ]
+[ action GreenPlayer Red no RedCollision ] -> [ RedPlayer Green ]
+[ action GreenPlayer Blue no BlueCollision ] -> [ BluePlayer Green ]
+
+( speaking to dudes acts as a checkpoint )
+
+[ Player FolkCenter | ... | rock | no sky ] -> [ Player FolkCenter | ... | rock | no sky ] checkpoint
+
+( speaking to the folk )
+down [ Player FolkCenter | ... | rock | L ] -> [ Player FolkCenter | ... | rock | ] message When the oracles shone, they could walk where we could not.
+
+down [ Player FolkCenter | ... | rock | : ] -> [ Player FolkCenter | ... | rock | ] message Vibrations. When the folk come together, they change one another.
+
+down [ Player FolkCenter | ... | rock | ; ] -> [ Player FolkCenter | ... | rock | ] message Our gem is the identity.
+
+down [ Player FolkCenter | ... | rock | ! ] -> [ Player FolkCenter | ... | rock | ] message When gems touch, they fuse and new life is born.
+
+
+==============
+WINCONDITIONS
+==============
+
+
+=======
+LEVELS
+=======
+
+(message The oracles' gems have faded...
+message     today is an auspicious day)
+
