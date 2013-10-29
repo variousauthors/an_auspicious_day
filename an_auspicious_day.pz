@@ -382,8 +382,8 @@ R = ClosedRedOracle
 G = ClosedGreenOracle
 
 RedCollision = Leaves
-GreenCollision = TallGrass or Flowers or Stump or Water
-OrangeCollision = Trunk or Root or Sun
+GreenCollision = TallGrass or Water
+OrangeCollision = Trunk or Root or Stump or Sun
 BlueCollision = ClosedOracle or Rock or Cloud
 DownCrystals = OrangeCrystalDOWN or BlueCrystalDOWN or RedCrystalDown or GreenCrystalDown
 
