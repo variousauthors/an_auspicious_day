@@ -381,16 +381,6 @@ B = ClosedBlueOracle
 R = ClosedRedOracle
 G = ClosedGreenOracle
 
-PermitsOrange = Rock and Leaves and TallGrass
-PermitsRed = Rock and Stump and TallGrass
-PermitsGreen = Rock and Stump and Leaves
-PermitsBlue = Stump and Leaves and TallGrass
-
-Ⅰ = PermitsBlue
-Ⅱ = PermitsGreen
-Ⅲ = PermitsRed
-Ⅳ = PermitsOrange
-
 RedCollision = Leaves
 GreenCollision = TallGrass or Flowers or Stump or Water
 OrangeCollision = Trunk or Root or Sun
