@@ -114,9 +114,9 @@ FolkRight
 lightgrey grey darkgrey blue lightblue
 41114
 41314
-41312
-21112
-21112
+41314
+21114
+21114
 
 BluePlayer
 lightgrey grey darkgrey blue
@@ -514,16 +514,32 @@ late horizontal [ Orange  | Green  ] -> [ Red     | ]
 
 ( speaking to dudes acts as a checkpoint )
 
-down [ Player FolkCenter | ... | rock | no sky ] -> [ Player FolkCenter | ... | rock | no sky ] checkpoint
+down [ Player Folk | ... | rock | no sky ] -> [ Player Folk | ... | rock | no sky ] checkpoint
 
 ( speaking to the folk )
-down [ Player FolkCenter | ... | rock | L ] -> [ Player FolkCenter | ... | rock | ] message When the oracles shone, they could walk where we could not.
+(talkingPoints = ` or i or y or : or ; or & or $ or % or _)
 
-down [ Player FolkCenter | ... | rock | : ] -> [ Player FolkCenter | ... | rock | ] message Vibrations. When the folk come together, they change one another.
+down [ Player Folk | | | rock | ` ] -> [ Player Folk | | | rock | ]                                                         message Something feels different. They sky? Do you feel it?
+down [ Player Folk | | | rock | i ] -> [ Player Folk | | | rock | ]                                                         message That rock up ahead was blocking the path, so we built a ladder.
+down [ Player Folk | | | | | rock | y ] -> [ Player Folk | | | | | rock | ]                                                 message The oracle who stands over there once had a brilliant green gem.
+down [ Player Folk | | | rock | : ] -> [ Player Folk | | | rock | ]                                                         message That ladder is broken... I guess your journey ends here.
+down [ Player Folk | | | rock | ; ] -> [ Player Folk | | | rock | ]                                                         message You... you passed behind that rock? How!?
+down [ Player Folk | | | | rock | & ] -> [ Player Folk | | | | rock | ]                                                     message We once met a red Oracle. She could walk in the branches of trees.
+down [ Player Folk | | | | | | | rock | $ ] -> [ Player Folk | | | | | | | rock | ]                                         message Orange oracles were keyed to wood. They are all grey now...
 
-down [ Player FolkCenter | ... | rock | ; ] -> [ Player FolkCenter | ... | rock | ] message Our gem is the identity.
+down [ Player Folk | | | | | | | | | | | | | | | rock | S ] -> [ Player Folk | | | | | | | | | | | | | | | rock | ]         message If you get really stuck, press 'r' to go back to a checkpoint.
 
-down [ Player FolkCenter | ... | rock | ! ] -> [ Player FolkCenter | ... | rock | ] message When gems touch, they fuse and new life is born.
+down [ Player Folk | | | | | rock | % ] -> [ Player Folk | | | | | rock | ]                                                 message Vibrations. When the gems come together, they fuse into new gems.
+down [ Player Folk | | | | | rock | _ ] -> [ Player Folk | | | | | rock | ]                                                 message With the right pair of gems, an oracle could go anywhere.
+down [ Player Folk | | | rock | ` | ` ] -> [ Player Folk | | | rock ||]                                                     message Our oracle oracle tried to teach us... but we could never understand gem fusion.
+down [ Player Folk | | | | | rock | ` | i ] -> [ Player Folk | | | | | rock ||]                                             message Oracles, with the right gems, never feel stuck.
+down [ Player Folk | | | | | rock | ` | y ] -> [ Player Folk | | | | | rock ||]                                             message It must be nice...
+down [ Player Folk | | | | rock | ` | : ] -> [ Player Folk | | | | rock ||]                                                 message We blue folk once lived in the sky... now we are trapped here by our ignorance.
+down [ Player Folk | | | | | | | rock | ` | ; ] -> [ Player Folk | | | | | | | rock ||]                                     message Our blue gem is the identity. (x + b = x)
+down [ Player Folk | | | | | | | | | | | | | | | | rock | ` | & ] -> [ Player Folk | | | | | | | | | | | | | | | | rock ||] message A gem is its own negative image. (x + -x = b)
+down [ Player Folk | | | | | | | | | rock | ` | $ ] -> [ Player Folk | | | | | | | | | rock ||]                             message Don't rush to fuse gems: go as far as you can with what you have.
+down [ Player Folk | | | | | | | | | | | | rock | ` | % ] -> [ Player Folk | | | | | | | | | | | | rock ||]                 message The other side of this valley is a sacred place.
+down [ Player Folk | | | rock | ` | _ ] -> [ Player Folk | | | rock ||]                                                     message That's it for now... this is as far as it goes!
 
 
 ==============
