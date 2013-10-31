@@ -1,4 +1,4 @@
-title An Auspicious Day v0.0.4
+title An Auspicious Day v0.1.2
 author arrogant.gamer
 homepage www.arrogantgamer.com
 flickscreen 20x10
@@ -98,25 +98,25 @@ FolkLeft
 lightgrey grey darkgrey blue lightblue
 44111
 22231
-23232
-23212
-22212
+23231
+23211
+22211
 
 FolkCenter
 lightgrey grey darkgrey blue lightblue
-44442
-44442
-22412
-32412
-22012
+44444
+44111
+22131
+23131
+22111
 
 FolkRight
 lightgrey grey darkgrey blue lightblue
-24444
-24444
-24222
-21232
-21222
+41114
+41314
+41312
+21112
+21112
 
 BluePlayer
 lightgrey grey darkgrey blue
@@ -343,9 +343,10 @@ $ = Dirt and Stump
 * = Sun
 
 q = FolkLeft
+w = FolkCenter
 e = FolkRight
 1 = FolkCenter and Root
-w = 1 and BluePlayer
+f = 1 and BluePlayer
 2 = FolkCenter
 3 = FolkCenter
 4 = FolkCenter
@@ -382,7 +383,7 @@ R = ClosedRedOracle
 G = ClosedGreenOracle
 
 RedCollision = Leaves
-GreenCollision = TallGrass or Water
+GreenCollision = TallGrass or Water or Flowers
 OrangeCollision = Trunk or Root or Stump or Sun
 BlueCollision = ClosedOracle or Rock or Cloud
 DownCrystals = OrangeCrystalDOWN or BlueCrystalDOWN or RedCrystalDown or GreenCrystalDown
@@ -513,7 +514,7 @@ late horizontal [ Orange  | Green  ] -> [ Red     | ]
 
 ( speaking to dudes acts as a checkpoint )
 
-[ Player FolkCenter | ... | rock | no sky ] -> [ Player FolkCenter | ... | rock | no sky ] checkpoint
+down [ Player FolkCenter | ... | rock | no sky ] -> [ Player FolkCenter | ... | rock | no sky ] checkpoint
 
 ( speaking to the folk )
 down [ Player FolkCenter | ... | rock | L ] -> [ Player FolkCenter | ... | rock | ] message When the oracles shone, they could walk where we could not.
@@ -534,5 +535,5 @@ WINCONDITIONS
 LEVELS
 =======
 
-(message The oracles' gems have faded...
-message     today is an auspicious day)
+message The oracles' gems have faded...
+message     today is an auspicious day
