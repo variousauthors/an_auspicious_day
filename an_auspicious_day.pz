@@ -1,4 +1,4 @@
-title An Auspicious Day v0.1.2
+title An Auspicious Day v0.1.3
 author arrogant.gamer
 homepage www.arrogantgamer.com
 flickscreen 20x10
@@ -512,35 +512,33 @@ late horizontal [ Orange  | Green  ] -> [ Red     | ]
 [ action GreenPlayer Red no RedCollision ] -> [ RedPlayer Green ]
 [ action GreenPlayer Blue no BlueCollision ] -> [ BluePlayer Green ]
 
+[ action Player ] -> [ Player ]
+down [ Player Folk ] [ Player | ... | rock ] -> [ Player Folk ] [ Player | ... | action rock ]
+
 ( speaking to dudes acts as a checkpoint )
+down [ action rock | no sky ] -> checkpoint
 
-down [ Player Folk | ... | rock | no sky ] -> [ Player Folk | ... | rock | no sky ] checkpoint
+down [ action rock | ` |   ] -> [ rock | | ] message Something feels different. The sky? Do you feel it?
+down [ action rock | i |   ] -> [ rock | | ] message That rock up ahead was blocking the path, so we built a ladder.
+down [ action rock | y |   ] -> [ rock | | ] message The oracle who stands over there once had a brilliant green gem.
+down [ action rock | : |   ] -> [ rock | | ] message That ladder is broken... I guess your journey ends here.
+down [ action rock | ; |   ] -> [ rock | | ] message You... you passed behind that rock? How!?
+down [ action rock | & |   ] -> [ rock | | ] message We once met a red Oracle. She could walk in the branches of trees.
+down [ action rock | $ |   ] -> [ rock | | ] message Orange oracles were keyed to wood. They are all grey now...
 
-( speaking to the folk )
-(talkingPoints = ` or i or y or : or ; or & or $ or % or _)
+down [ action rock | S |   ] -> [ rock | | ] message If you get really stuck, press 'r' to go back to a checkpoint.
 
-down [ Player Folk | | | rock | ` ] -> [ Player Folk | | | rock | ]                                                         message Something feels different. They sky? Do you feel it?
-down [ Player Folk | | | rock | i ] -> [ Player Folk | | | rock | ]                                                         message That rock up ahead was blocking the path, so we built a ladder.
-down [ Player Folk | | | | | rock | y ] -> [ Player Folk | | | | | rock | ]                                                 message The oracle who stands over there once had a brilliant green gem.
-down [ Player Folk | | | rock | : ] -> [ Player Folk | | | rock | ]                                                         message That ladder is broken... I guess your journey ends here.
-down [ Player Folk | | | rock | ; ] -> [ Player Folk | | | rock | ]                                                         message You... you passed behind that rock? How!?
-down [ Player Folk | | | | rock | & ] -> [ Player Folk | | | | rock | ]                                                     message We once met a red Oracle. She could walk in the branches of trees.
-down [ Player Folk | | | | | | | rock | $ ] -> [ Player Folk | | | | | | | rock | ]                                         message Orange oracles were keyed to wood. They are all grey now...
-
-down [ Player Folk | | | | | | | | | | | | | | | rock | S ] -> [ Player Folk | | | | | | | | | | | | | | | rock | ]         message If you get really stuck, press 'r' to go back to a checkpoint.
-
-down [ Player Folk | | | | | rock | % ] -> [ Player Folk | | | | | rock | ]                                                 message Vibrations. When the gems come together, they fuse into new gems.
-down [ Player Folk | | | | | rock | _ ] -> [ Player Folk | | | | | rock | ]                                                 message With the right pair of gems, an oracle could go anywhere.
-down [ Player Folk | | | rock | ` | ` ] -> [ Player Folk | | | rock ||]                                                     message Our oracle oracle tried to teach us... but we could never understand gem fusion.
-down [ Player Folk | | | | | rock | ` | i ] -> [ Player Folk | | | | | rock ||]                                             message Oracles, with the right gems, never feel stuck.
-down [ Player Folk | | | | | rock | ` | y ] -> [ Player Folk | | | | | rock ||]                                             message It must be nice...
-down [ Player Folk | | | | rock | ` | : ] -> [ Player Folk | | | | rock ||]                                                 message We blue folk once lived in the sky... now we are trapped here by our ignorance.
-down [ Player Folk | | | | | | | rock | ` | ; ] -> [ Player Folk | | | | | | | rock ||]                                     message Our blue gem is the identity. (x + b = x)
-down [ Player Folk | | | | | | | | | | | | | | | | rock | ` | & ] -> [ Player Folk | | | | | | | | | | | | | | | | rock ||] message A gem is its own negative image. (x + -x = b)
-down [ Player Folk | | | | | | | | | rock | ` | $ ] -> [ Player Folk | | | | | | | | | rock ||]                             message Don't rush to fuse gems: go as far as you can with what you have.
-down [ Player Folk | | | | | | | | | | | | rock | ` | % ] -> [ Player Folk | | | | | | | | | | | | rock ||]                 message The other side of this valley is a sacred place.
-down [ Player Folk | | | rock | ` | _ ] -> [ Player Folk | | | rock ||]                                                     message That's it for now... this is as far as it goes!
-
+down [ action rock | % |   ] -> [ rock | | ] message Vibrations. When the gems come together, they fuse into new gems.
+down [ action rock | _ |   ] -> [ rock | | ] message With the right pair of gems, an oracle could go anywhere.
+down [ action rock | ` | ` ] -> [ rock | | ] message Our oracle oracle tried to teach us... but we could never understand gem fusion.
+down [ action rock | ` | i ] -> [ rock | | ] message Oracles, with the right gems, never feel stuck.
+down [ action rock | ` | y ] -> [ rock | | ] message It must be nice...
+down [ action rock | ` | : ] -> [ rock | | ] message We blue folk once lived in the sky... now we are trapped here by our ignorance.
+down [ action rock | ` | ; ] -> [ rock | | ] message Our blue gem is the identity. (x + b = x)
+down [ action rock | ` | & ] -> [ rock | | ] message A gem is its own negative image. (x + -x = b)
+down [ action rock | ` | $ ] -> [ rock | | ] message Don't rush to fuse gems: go as far as you can with what you have.
+down [ action rock | ` | % ] -> [ rock | | ] message The other side of this valley is a sacred place.
+down [ action rock | ` | _ ] -> [ rock | | ] message That's it for now... this is as far as it goes!
 
 ==============
 WINCONDITIONS
@@ -553,3 +551,4 @@ LEVELS
 
 message The oracles' gems have faded...
 message     today is an auspicious day
+

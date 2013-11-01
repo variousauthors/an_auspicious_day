@@ -3,6 +3,8 @@
  - bug: you can't summon a crystal on the last tile of the screen (because of the dual crystal thing)
  - bug: gravity doesn't work for crossing a collision object
  - bug: the checkpoint rule requires "no sky", verify that all checkpoints work
+   - checkpoints ^``, ^`i and ^`y and ^`_ do not work -- they repeat the first text
+   - neither does ^`& -- it does not fire
 
 
 
