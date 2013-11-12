@@ -1,4 +1,4 @@
-title An Auspicious Day v0.1.3
+title An Auspicious Day v0.2.1
 author arrogant.gamer
 homepage www.arrogantgamer.com
 flickscreen 20x10
@@ -263,7 +263,7 @@ lightblue blue darkblue lightgreen
 11331
 
 Cloud
-white grey lightgrey
+#DDEEFF
 00000
 00000
 00000
@@ -345,11 +345,13 @@ $ = Dirt and Stump
 q = FolkLeft
 w = FolkCenter
 e = FolkRight
-1 = FolkCenter and Root
-f = 1 and BluePlayer
+f = FolkCenter and BluePlayer
 2 = FolkCenter
 3 = FolkCenter
 4 = FolkCenter
+
+0 = Dirt and Root
+1 = Dirt and Rock
 
 Folk = FolkCenter or FolkLeft or FolkRight
 
@@ -516,29 +518,36 @@ late horizontal [ Orange  | Green  ] -> [ Red     | ]
 down [ Player Folk ] [ Player | ... | rock ] -> [ Player Folk ] [ Player | ... | action rock ]
 
 ( speaking to dudes acts as a checkpoint )
-down [ action rock | no sky ] -> checkpoint
+down [ action rock sky ] -> checkpoint
 
-down [ action rock | ` |   ] -> [ rock | | ] message Something feels different. The sky? Do you feel it?
-down [ action rock | i |   ] -> [ rock | | ] message That rock up ahead was blocking the path, so we built a ladder.
-down [ action rock | y |   ] -> [ rock | | ] message The oracle who stands over there once had a brilliant green gem.
-down [ action rock | : |   ] -> [ rock | | ] message That ladder is broken... I guess your journey ends here.
-down [ action rock | ; |   ] -> [ rock | | ] message You... you passed behind that rock? How!?
-down [ action rock | & |   ] -> [ rock | | ] message We once met a red Oracle. She could walk in the branches of trees.
-down [ action rock | $ |   ] -> [ rock | | ] message Orange oracles were keyed to wood. They are all grey now...
+down [ action rock | 0 | 0 | 0 | 0 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message Something feels different. The sky? Do you feel it?
+down [ action rock | 0 | 0 | 0 | 1 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message That rock up ahead was blocking the path, so we built a ladder.
+down [ action rock | 0 | 0 | 0 | 1 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message The oracle who stands over there once had a brilliant green gem.
+down [ action rock | 0 | 0 | 1 | 0 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message That ladder is broken... I guess your journey ends here.
+down [ action rock | 0 | 0 | 1 | 0 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message You... you passed behind that rock? How!?
+down [ action rock | 0 | 0 | 1 | 1 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message We once met a red Oracle. She could walk in the branches of trees.
+down [ action rock | 0 | 0 | 1 | 1 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message Orange oracles were keyed to wood. They are all grey now...
 
-down [ action rock | S |   ] -> [ rock | | ] message If you get really stuck, press 'r' to go back to a checkpoint.
+down [ action rock | 0 | 1 | 0 | 0 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message If you get really stuck, press 'r' to go back to a checkpoint.
+down [ action rock | 0 | 1 | 0 | 0 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message Vibrations. When the gems come together, they fuse into new gems.
+down [ action rock | 0 | 1 | 0 | 1 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message With the right pair of gems, an oracle could go anywhere.
+down [ action rock | 0 | 1 | 0 | 1 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message Our oracle tried to teach us... but we could never understand gem fusion.
+down [ action rock | 0 | 1 | 1 | 0 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message Oracles, with the right gems, never feel stuck.
+down [ action rock | 0 | 1 | 1 | 0 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message It must be nice...
+down [ action rock | 0 | 1 | 1 | 1 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message We blue folk once lived in the sky... now we are trapped here by our ignorance.
+down [ action rock | 0 | 1 | 1 | 1 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message Our blue gem is the identity.
 
-down [ action rock | % |   ] -> [ rock | | ] message Vibrations. When the gems come together, they fuse into new gems.
-down [ action rock | _ |   ] -> [ rock | | ] message With the right pair of gems, an oracle could go anywhere.
-down [ action rock | ` | ` ] -> [ rock | | ] message Our oracle oracle tried to teach us... but we could never understand gem fusion.
-down [ action rock | ` | i ] -> [ rock | | ] message Oracles, with the right gems, never feel stuck.
-down [ action rock | ` | y ] -> [ rock | | ] message It must be nice...
-down [ action rock | ` | : ] -> [ rock | | ] message We blue folk once lived in the sky... now we are trapped here by our ignorance.
-down [ action rock | ` | ; ] -> [ rock | | ] message Our blue gem is the identity. (x + b = x)
-down [ action rock | ` | & ] -> [ rock | | ] message A gem is its own negative image. (x + -x = b)
-down [ action rock | ` | $ ] -> [ rock | | ] message Don't rush to fuse gems: go as far as you can with what you have.
-down [ action rock | ` | % ] -> [ rock | | ] message The other side of this valley is a sacred place.
-down [ action rock | ` | _ ] -> [ rock | | ] message That's it for now... this is as far as it goes!
+down [ action rock | 1 | 0 | 0 | 0 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message A gem is its own negative image.
+down [ action rock | 1 | 0 | 0 | 0 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message Don't rush to fuse gems: go as far as you can with what you have.
+down [ action rock | 1 | 0 | 0 | 1 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message The other side of this valley is a sacred place.
+down [ action rock | 1 | 0 | 0 | 1 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message That's it for now... this is as far as it goes!
+down [ action rock | 1 | 0 | 1 | 0 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message Something has happened to the oracles... I think?
+down [ action rock | 1 | 0 | 1 | 0 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message I came here long ago. It is quite, and I like that.
+down [ action rock | 1 | 0 | 1 | 1 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message We are the people of the sky. Never forget.
+down [ action rock | 1 | 0 | 1 | 1 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message Meditating here, I realized... gems are trigon symmetries!
+down [ action rock | 1 | 1 | 0 | 0 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message You can go down and get stuck... but,
+down [ action rock | 1 | 1 | 0 | 0 | 1 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message I wonder if there is a way to go up, and get stuck?
+down [ action rock | 1 | 1 | 0 | 1 | 0 ] -> [ rock | 0 | 0 | 0 | 0 | 0 ] message Do you like my garden? It needs space to grow.
 
 ==============
 WINCONDITIONS
