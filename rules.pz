@@ -11,7 +11,6 @@ OBJECTS
 
 Sky
 White lightblue lightblue
-
 22222
 22222
 22222
@@ -20,7 +19,6 @@ White lightblue lightblue
 
 Grass
 LightGreen Green
-
 11101
 10000
 .01..
@@ -29,7 +27,6 @@ LightGreen Green
 
 Dirt
 lightbrown brown darkbrown
-
 10000
 11111
 01211
@@ -38,7 +35,6 @@ lightbrown brown darkbrown
 
 Ladder
 lightbrown brown darkbrown grey darkgrey
-
 40004
 43334
 41214
@@ -47,7 +43,6 @@ lightbrown brown darkbrown grey darkgrey
 
 Leaves ( maybe simplify tree model )
 pink lightred red
-
 .0000
 12101
 00020
@@ -377,8 +372,6 @@ GreenToRed = GreenPlayer and Red and openOracle
 GreenToBlue = GreenPlayer and Blue and openOracle
 
 P = BluePlayer and FolkCenter
-+ = BluePlayer
-& = BluePlayer and Dirt
 O = ClosedOrangeOracle
 B = ClosedBlueOracle
 R = ClosedRedOracle
@@ -560,4 +553,3 @@ LEVELS
 
 message The oracles' gems have faded...
 message     today is an auspicious day
-
